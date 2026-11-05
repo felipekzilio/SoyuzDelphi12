@@ -1,0 +1,36 @@
+# Delphi / build artifacts
+*.dcu
+*.exe
+*.dll
+*.bpl
+*.dcp
+*.rsm
+*.map
+*.stat
+*.tds
+*.local
+*.identcache
+*.~* 
+*.orig
+
+# Build folders
+build/
+**/Win64/
+**/__history/
+**/__recovery/
+
+# IDE
+*.sketch
+*.dsk
+*.groupproj.local
+*.dproj.local
+*.identcache
+
+# Logs and runtime files
+log.txt
+*.log
+
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store

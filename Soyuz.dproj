@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{D7C5D26B-3E6A-4C16-9A2A-2C2E1F67A901}</ProjectGuid>
+    <ProjectVersion>20.4</ProjectVersion>
+    <FrameworkType>None</FrameworkType>
+    <MainSource>Soyuz.dpr</MainSource>
+    <Config Condition="'$(Config)'==''">Release</Config>
+    <Platform Condition="'$(Platform)'==''">Win64</Platform>
+    <DCC_UsePackage>false</DCC_UsePackage>
+    <DCC_ExeOutput>build\$(Platform)\$(Config)</DCC_ExeOutput>
+    <DCC_DcuOutput>build\dcu\$(Platform)\$(Config)</DCC_DcuOutput>
+    <DCC_UnitSearchPath>src\Core;src\License;src\Launcher;src\Riot;src\Session;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <DelphiCompile Include="Soyuz.dpr"><MainSource>True</MainSource></DelphiCompile>
+    <DCCReference Include="src\Core\uArguments.pas"/>
+    <DCCReference Include="src\Core\uConfiguration.pas"/>
+    <DCCReference Include="src\Core\uLogger.pas"/>
+    <DCCReference Include="src\Core\uServiceControl.pas"/>
+    <DCCReference Include="src\License\uPassFile.pas"/>
+    <DCCReference Include="src\Launcher\uProcessLauncher.pas"/>
+    <DCCReference Include="src\Riot\uVanguard.pas"/>
+    <DCCReference Include="src\Riot\uRiotClient.pas"/>
+    <DCCReference Include="src\Session\uProcessMonitor.pas"/>
+    <DCCReference Include="src\Session\uSessionManager.pas"/>
+  </ItemGroup>
+</Project>
